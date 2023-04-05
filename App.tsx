@@ -18,6 +18,7 @@ import {hydrateStores} from '@app/stores';
 import {initServices} from '@app/services';
 import {AppProvider} from '@app/utils/providers';
 import {useAppearance} from '@app/utils/hooks';
+// import crypto from 'crypto';
 
 LogBox.ignoreLogs([
   'Require',
@@ -27,7 +28,7 @@ LogBox.ignoreLogs([
 export default (): JSX.Element => {
   useAppearance();
   const [ready, setReady] = useState(false);
-
+  // console.log(crypto);
   // `onLaunch` performs actions that have to be done on app launch before displaying app UI.
   // If you need to make some api requests, load remote config, or some other "heavy" actions, you can use `@app/services/onLaunch.tsx`.
   const onLaunch = useCallback(async () => {

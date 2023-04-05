@@ -16,6 +16,7 @@ import {
 } from '@app/utils/designSystem';
 import {services} from '@app/services';
 import {AuthLogin} from './screens/auth/login';
+import {Chat} from './screens/chat';
 
 // NAVIO
 export const navio = Navio.build({
@@ -27,6 +28,7 @@ export const navio = Navio.build({
     Playground,
     PlaygroundFlashList,
     PlaygroundExpoImage,
+    Chat,
 
     // for .pushStack example
     ProductPage: {
@@ -40,7 +42,7 @@ export const navio = Navio.build({
     AuthLogin,
   },
   stacks: {
-    MainStack: ['Main', 'Example'],
+    MainStack: ['Main', 'Example', 'Chat'],
     ExampleStack: {
       screens: ['Example'],
       navigatorProps: {
